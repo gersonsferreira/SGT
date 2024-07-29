@@ -1,0 +1,11 @@
+﻿@model SGT.Models.AddStatusViewModel
+@{
+}
+<h1>Adicionar Status</h1>
+<form method="post" action="Add" class="mt-5">
+    <div class="mb-3">
+        <label for="" class="form-label">Descrição</label>
+        <input type="text" style="width:400px" asp-for="Descricao">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

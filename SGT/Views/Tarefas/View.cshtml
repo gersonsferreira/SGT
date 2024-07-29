@@ -1,0 +1,16 @@
+﻿@model SGT.Models.UpdateTarefasViewModel
+@{
+}
+<h1>Editar Tarefas</h1>
+<form method="post" action="View" class="mt-5">
+    <div class="mb-3">
+        <label for="" class="form-label" style="width:70px">Id</label>
+        <input type="text" asp-for="Id" readonly>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Descrição</label>
+        <input type="text" asp-for="Descricao">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-danger" asp-action="Delete" asp-controller="Tarefas">Delete</button>
+</form>

@@ -1,0 +1,16 @@
+﻿@model SGT.Models.UpdateStatusViewModel
+@{
+}
+<h1>Editar Status</h1>
+<form method="post" action="View" class="mt-5">
+    <div class="mb-3">
+        <label for="" style="width:70px" class="form-label">Id</label>
+        <input type="text"  asp-for="Id" readonly>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Descrição</label>
+        <input type="text" style="width:400px" asp-for="Descricao">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-danger" asp-action="Delete" asp-controller="Status">Delete</button>
+</form>

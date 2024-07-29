@@ -1,0 +1,39 @@
+﻿@model SGT.Models.DashboardViewModel
+@{
+}
+
+<h1>Dashboard</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Total de Tarefas
+            </th>
+            <th>
+                Total de Tarefas Concluídas
+            </th>
+            <th>
+                Total de Tarefas Pendentes
+            </th>
+            <th>
+                Total de Tarefas Em Progresso
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align="center">
+                @Model.TotalTarefas
+            </td>
+            <td align="center">
+                @Model.TarefasConcluidas
+            </td>
+            <td align="center">
+                @Model.TarefasPendentes
+            </td>
+            <td align="center">
+                @Model.TotalEmProgresso
+            </td>
+        </tr>
+    </tbody>
+</table>

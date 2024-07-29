@@ -1,0 +1,55 @@
+﻿@model List<SGT.Models.Domain.Tarefas>
+
+@{
+}
+
+<h1>Lista das Tarefas</h1>
+<table class="table">
+<thead>
+    <tr>
+        <th>
+            Descrição
+        </th>
+        <th>
+            Data de Criação
+        </th>
+        <th>
+            Data de Conclusão
+        </th>
+        <th>
+            Editar
+        </th>
+        <th>
+            Em Progresso
+        </th>
+        <th>
+            Concluir
+        </th>
+    </tr>
+ </thead>
+ <tbody>
+     @foreach (var tarefa in Model)
+    {
+        <tr>
+            <td>
+                @tarefa.Descricao
+            </td>
+            <td>
+                @tarefa.DataCriacao.ToString("dd-mm-yyyy")
+            </td>
+            <td>
+                @tarefa.DataConclusao
+            </td>
+            <td>
+                <a href="Tarefas/View/@tarefa.Id">Visualizar</a>
+            </td>
+            <td>
+                <a href="tarefas/ViewEmProgresso/@tarefa.Id">Em Progresso</a>
+            </td>
+            <td>
+                <a href="Tarefas/ViewConcluir/@tarefa.Id">Concluir</a>
+            </td>
+        </tr>
+    }
+ </tbody>
+</table>

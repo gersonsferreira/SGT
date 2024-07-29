@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - SGT</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/SGT.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <div>
+        <header>
+@*             <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+                <div class="container-fluid" style="background-color:burlywood">
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">SGT</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Tarefas" asp-action="Index">Listar Tarefas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Tarefas" asp-action="Add">Adicionar Tarefa</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav> *@
+            <div class="menu">
+                <nav class="main-nav">
+                    <ul>
+                        <li><a asp-area="" asp-controller="Home" asp-action="Index">SGT</a></li>
+                        <li>
+                            <a href="">Tarefas</a>
+                            <ul>
+                                <li><a asp-area="" asp-controller="Tarefas" asp-action="Index">Listar Tarefas</a></li>
+                                <li><a asp-area="" asp-controller="Tarefas" asp-action="Add">Adicionar Tarefa</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="">Usuários</a>
+                            <ul>
+                                <li><a asp-area="" asp-controller="Usuario" asp-action="Index">Listar Usuários</a></li>
+                                <li><a asp-area="" asp-controller="Usuario" asp-action="Add">Adicionar Usuários</a></li>
+@*                                 <li>
+                                    <a href="#" title="Banco de Dados">Banco de Dados</a>
+
+                                    <ul>
+                                        <li><a href="#" title="MySQL">Prod</a></li>
+                                        <li><a href="#" title="MariaDB">Homol </a></li>
+                                    </ul>
+
+                                </li>
+ *@
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">Status</a>
+                            <ul>
+                                <li><a asp-area="" asp-controller="Status" asp-action="Index">Listar Status</a></li>
+                                <li><a asp-area="" asp-controller="Status" asp-action="Add">Adicionar Status</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#" title="Fale Conosco">Fale Conosco</a></li>
+
+                    </ul>
+
+                </nav>
+                <div class="mob-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="overlay"></div>
+
+            </div><!-- menu -->
+        </header>
+    </div>
+    <div class="container">
+        <main role="main" class="pb-3" style="background-color:darkgrey">
+            @RenderBody()
+        </main>
+    </div>
+    <div>
+        <footer class="border-top footer text-muted" style="background-color:burlywood">
+            <div class="container">
+                &copy; 2024 - SGT - Sistema Gerenciador de Tarefas
+            </div>
+        </footer>
+    </div>
+
+    <script src="~/js/jquery.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

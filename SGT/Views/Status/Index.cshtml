@@ -1,0 +1,30 @@
+﻿@model List<SGT.Models.Domain.Status>
+
+@{
+}
+
+<h1>Lista dos Status</h1>
+<table class="table">
+<thead>
+    <tr>
+        <th>
+            Descrição
+        </th>
+        <th>
+        </th>
+    </tr>
+ </thead>
+ <tbody>
+     @foreach (var status in Model)
+    {
+        <tr>
+            <td>
+                @status.Descricao
+            </td>
+            <td>
+                <a href="Status/View/@status.Id">Visualizar</a>
+            </td>
+        </tr>
+    }
+ </tbody>
+</table>

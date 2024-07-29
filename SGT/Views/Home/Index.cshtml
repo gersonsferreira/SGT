@@ -1,0 +1,20 @@
+﻿@model SGT.Models.UpdateUsuarioViewModel
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="text-center">
+    <h1 class="display-4">SGT - Sistema de Gerenciamento de Tarefas</h1>
+    <h2 class="display-4">Login</h2>
+    <form method="post" action="Home/Index" class="mt-5">
+        <div class="mb-3">
+            <label for="" class="form-label">e-mail</label>
+            <input type="email" asp-for="Email">
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">Senha</label>
+            <input type="text" asp-for="Senha">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

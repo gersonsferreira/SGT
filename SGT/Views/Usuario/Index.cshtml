@@ -1,0 +1,40 @@
+﻿@model List<SGT.Models.Domain.Usuario>
+
+@{
+}
+
+<h1>Lista dos Usuários</h1>
+<table class="table">
+<thead>
+    <tr>
+        <th>
+            Nome
+        </th>
+        <th>
+            Email
+        </th>
+         <th>
+            Senha
+        </th>
+         <th>
+            Admin
+        </th>
+         <th>
+        </th>
+    </tr>
+ </thead>
+ <tbody>
+     @foreach (var usuario in Model)
+    {
+        <tr>
+            <td>@usuario.Nome</td>
+            <td>@usuario.Email</td>
+            <td>@usuario.Senha</td>
+            <td>@usuario.Admin</td>
+            <td>
+                <a href="Usuario/View/@usuario.Id">Visualizar</a>
+            </td>
+        </tr>
+    }
+ </tbody>
+</table>

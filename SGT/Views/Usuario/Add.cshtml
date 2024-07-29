@@ -1,0 +1,23 @@
+﻿@model SGT.Models.AddUsuarioViewModel
+@{
+}
+<h1>Adicionar Usuario</h1>
+<form method="post" action="Add" class="mt-5">
+    <div class="mb-3">
+        <label for="" class="form-label">Nome</label>
+        <input type="text" style="width:400px" required asp-for="Nome">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">e-mail</label>
+        <input type="email" style="width:400px" asp-for="Email">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Senha (mínimo de 8 caracteres)</label>
+        <input type="password" maxlength="10" minlength="8" required asp-for="Senha">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Admin</label>
+        <input type="checkbox" asp-for="Admin">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
